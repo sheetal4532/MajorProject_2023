@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <style>
+        .card {
+            border: none;
+        }
+        
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+        }
+        
+        .card-body {
+            flex: 1 1 auto;
+            padding: 1rem 1rem;
+        }
+        
+        a {
+            color: black;
+            text-decoration: auto;
+        }
+        
+        a:hover {
+            color: black;
+        }
+        
+        .justify-content-between {
+            justify-content: space-between!important;
+        }
+        
+        .mt-3 {
+            margin-top: 1rem!important;
+        }
+        
+        .pt-1 {
+            padding-top: .25rem!important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- discount code part -->
+    <div class="discount_code mt-3 shadow">
+        <div class="card">
+            <div class="card-body">
+                <a class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+Add a discount code (optional)
+<span><i class="fas fa-chevron-down pt-1"></i></span>
+</a>
+                <div class="collapse" id="collapseExample">
+                    <div class="mt-3">
+                        <input type="text" name="" id="discount_code1" class="form-control font-weight-bold" placeholder="Enter the discount code">
+                        <small id="error_trw" class="text-dark mt-3">code is thapa</small>
+                    </div>
+                    <button class="btn btn-primary btn-sm mt-3" onclick="discount_code()">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- discount code ends -->
+    <script>
+        var discountCode = document.getElementById('discount_code1');
+        const discount_code = () => {
+            // let totalamtcurr = parseInt(total_cart_amt.innerHTML);
+            let error_trw = document.getElementById('error_trw');
+            if (discountCode.value === 'thapa') {
+                // let newtotalamt = totalamtcurr - 15;
+                // total_cart_amt.innerHTML = newtotalamt;
+                error_trw.innerHTML = "Hurray! code is valid";
+            } else {
+                error_trw.innerHTML = "Try Again! Valid code is thapa";
+            }
+        }
+    </script>
+</body>
+
+</html>

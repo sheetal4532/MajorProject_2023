@@ -1,0 +1,225 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            min-height: 100vh;
+            /* background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%); */
+            background: url(image/flowers.jpeg);
+            background-size: auto;
+        }
+        
+        .container form {
+            padding: 20px;
+            width: 700px;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+        }
+        
+        .container form .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .container form .row .col {
+            flex: 1 1 250px;
+        }
+        
+        .container form .row .col .title {
+            font-size: 20px;
+            color: #333;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .container form .row .col .inputBox {
+            margin: 15px 0;
+        }
+        
+        .container form .row .col .inputBox span {
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .container form .row .col .inputBox input {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 15px;
+            text-transform: none;
+        }
+        
+        .container form .row .col .inputBox input:focus {
+            border: 1px solid #000;
+        }
+        
+        .container form .row .col .flex {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .container form .row .col .flex .inputBox {
+            margin-top: 5px;
+        }
+        
+        .container form .row .col .inputBox img {
+            height: 34px;
+            margin-top: 5px;
+            filter: drop-shadow(0 0 1px #000);
+        }
+        
+        .container form .button {
+            width: 100%;
+            padding: 12px;
+            font-size: 17px;
+            background: orange;
+            color: #fff;
+            margin-top: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .container form .button:hover {
+            background: orange;
+        }
+        /* payment mode start */
+        /* .discount_code .card {
+    border: none;
+}
+
+.discount_code .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+.discount_code .card .card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+} */
+        
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: black;
+        }
+        
+        .justify-content-between {
+            justify-content: space-between!important;
+            color: black;
+        }
+        
+        .mt-3 {
+            margin-top: 1rem!important;
+            color: black;
+        }
+        
+        .pt-1 {
+            padding-top: .25rem!important;
+            color: black;
+        }
+        
+        .d-flex {
+            display: flex!important;
+            text-decoration-line: none;
+            color: black;
+        }
+        
+        .justify-content-between {
+            justify-content: space-between!important;
+            color: black;
+        }
+        
+        .fas {
+            font-family: 'Poppins', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 0;
+        }
+        
+        img {
+            height: 3rem;
+            width: 3rem;
+            object-fit: cover;
+            /* padding: 0.5rem 0.5rem; */
+        }
+        
+        img .paykaro {
+            height: 3rem;
+            width: 3rem;
+            object-fit: cover;
+        }
+        /* payment mode end */
+        /* ****************************** */
+        
+        .mb-0 {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .mb-0 .btn-link {
+            text-decoration: none;
+            color: #000;
+            font-size: 17px;
+        }
+        
+        .box p {
+            text-align: center;
+        }
+        
+        .box .btn {
+            margin-left: -6.5rem;
+        }
+        
+        .btn-link:hover {
+            color: black;
+        }
+        
+        .QR img {
+            height: 225px;
+            width: 263px;
+        }
+        /* ****************************** */
+        
+        @media (max-width:768px) {
+            .container {
+                max-width: 768 px;
+            }
+        }
+        
+        @media (max-width:576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+        /* media queries */
+        /* @media (max-width:991px) {
+            @media (max-width: 768px) {}
+            @media (max-width: 450px) {}
+        }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>welcome</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    
+
+     <script>
+
+        swal({
+        title: "Thank You!!",
+        text: "Your detail has been successfully submitted.",
+        icon: "success",
+        });
+
+    </script>
+       
+
+    
+
+</body>
+</html>
