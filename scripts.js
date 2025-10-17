@@ -46,7 +46,7 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
-let countDate = new Date('July 1, 2024 00:00:00').getTime();
+let countDate = new Date('July 1, 2026 00:00:00').getTime();
 
 function countDown() {
 
