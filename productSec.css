@@ -35,9 +35,7 @@ body {
     height: 200rem;
 }
 
-
 /* header section start */
-
 .header {
     position: fixed;
     top: 0;
@@ -159,8 +157,6 @@ h2.title {
     padding: 20px 12px;
     box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
     border-radius: 3px;
-    /* border: .1rem solid var(--black);
-    color: var(--black); */
 }
 
 .pic {
@@ -174,7 +170,6 @@ h2.title {
 .food-img {
     transition: 0.4s;
     aspect-ratio: 1/1;
-    /* object-fit: cover; */
     height: 26rem;
     width: 30rem;
     margin-left: 1rem;
@@ -379,9 +374,7 @@ section {
     clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
 }
 
-
 /* discount code start */
-
 .discount_code .card {
     border: none;
 }
@@ -423,13 +416,9 @@ section {
 .pt-1 {
     padding-top: .25rem!important;
 }
-
-
 /* discount code end */
 
-
 /* media queries */
-
 @media (max-width:991px) {
     html {
         font-size: 55%;
@@ -447,9 +436,7 @@ section {
     }
 }
 
-
 /* media queries */
-
 @media (max-width:991px) {
     html {
         font-size: 55%;
