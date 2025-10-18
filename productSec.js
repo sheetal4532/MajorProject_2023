@@ -1,46 +1,34 @@
 const btnCart = document.querySelector('#cart-icon');
 const cart = document.querySelector('.cart');
 const btnClose = document.querySelector('#cart-close');
-
 btnCart.addEventListener('click', () => {
     cart.classList.add('cart-active');
 });
-
 btnClose.addEventListener('click', () => {
     cart.classList.remove('cart-active');
 });
-
 document.addEventListener('DOMContentLoaded', loadFood);
-
 function loadFood() {
     loadContent();
-
 }
-
 function loadContent() {
     //Remove Food Items  From Cart
     let btnRemove = document.querySelectorAll('.cart-remove');
     btnRemove.forEach((btn) => {
         btn.addEventListener('click', removeItem);
     });
-
     //Product Item Change Event
     let qtyElements = document.querySelectorAll('.cart-quantity');
     qtyElements.forEach((input) => {
         input.addEventListener('change', changeQty);
     });
-
     //Product Cart
-
     let cartBtns = document.querySelectorAll('.add-cart');
     cartBtns.forEach((btn) => {
         btn.addEventListener('click', addCart);
     });
-
     updateTotal();
 }
-
-
 //Remove Item
 function removeItem() {
     if (confirm('Are Your Sure to Remove')) {
@@ -50,7 +38,6 @@ function removeItem() {
         loadContent();
     }
 }
-
 //Change Quantity
 function changeQty() {
     if (isNaN(this.value) || this.value < 1) {
@@ -58,19 +45,14 @@ function changeQty() {
     }
     loadContent();
 }
-
 let itemList = [];
-
 //Add Cart
 function addCart() {
     let food = this.parentElement;
     let title = food.querySelector('.food-title').innerHTML;
     let price = food.querySelector('.food-price').innerHTML;
     let imgSrc = food.querySelector('.food-img').src;
-    //console.log(title,price,imgSrc);
-
     let newProduct = { title, price, imgSrc }
-
     //Check Product already Exist in Cart
     if (itemList.find((el) => el.title == newProduct.title)) {
         alert("Product Already added in Cart");
@@ -78,8 +60,6 @@ function addCart() {
     } else {
         itemList.push(newProduct);
     }
-
-
     let newProductElement = createCartProduct(title, price, imgSrc);
     let element = document.createElement('div');
     element.innerHTML = newProductElement;
@@ -88,9 +68,7 @@ function addCart() {
     loadContent();
 }
 
-
 function createCartProduct(title, price, imgSrc) {
-
     return `
   <div class="cart-box">
   <img src="${imgSrc}" class="cart-img">
@@ -110,23 +88,16 @@ function createCartProduct(title, price, imgSrc) {
 function updateTotal() {
     const cartItems = document.querySelectorAll('.cart-box');
     const totalValue = document.querySelector('.total-price');
-
     let total = 0;
-
     cartItems.forEach(product => {
         let priceElement = product.querySelector('.cart-price');
         let price = parseFloat(priceElement.innerHTML.replace("Rs.", ""));
         let qty = product.querySelector('.cart-quantity').value;
         total += (price * qty);
         product.querySelector('.cart-amt').innerText = "Rs." + (price * qty);
-
     });
-
     totalValue.innerHTML = 'Rs.' + total;
-
-
     // Add Product Count in Cart Icon
-
     const cartCount = document.querySelector('.cart-count');
     let count = itemList.length;
     cartCount.innerHTML = count;
@@ -136,17 +107,12 @@ function updateTotal() {
     } else {
         cartCount.style.display = 'block';
     }
-
-
 }
 
 var discountCode = document.getElementById('discount_code1');
 const discount_code = () => {
-    // let totalamtcurr = parseInt(total_cart_amt.innerHTML);
     let error_trw = document.getElementById('error_trw');
     if (discountCode.value === 'sheetal') {
-        // let newtotalamt = totalamtcurr - 15;
-        // total_cart_amt.innerHTML = newtotalamt;
         error_trw.innerHTML = "Hurray! code is valid";
     } else {
         error_trw.innerHTML = "Try Again! Valid code is sheetal";
